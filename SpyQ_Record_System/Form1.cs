@@ -14,7 +14,6 @@ namespace SpyQ_Record_System
     {
         public Form1()
         {
-            Console.WriteLine("hello C#");
             InitializeComponent();
         }
     }
