@@ -14,7 +14,7 @@ namespace SpyQ_Record_System
     {
         public Form1()
         {
-            Console.WriteLine("Hello windowforms");
+            Console.WriteLine("변웅섭 멍청이");
             InitializeComponent();
         }
     }
