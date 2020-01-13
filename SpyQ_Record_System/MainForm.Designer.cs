@@ -30,6 +30,7 @@
         {
             this.LogListbox = new System.Windows.Forms.ListBox();
             this.GoSettingButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LogListbox
@@ -45,22 +46,37 @@
             // 
             // GoSettingButton
             // 
-            this.GoSettingButton.Location = new System.Drawing.Point(0, 0);
+            this.GoSettingButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GoSettingButton.Location = new System.Drawing.Point(0, 530);
             this.GoSettingButton.Name = "GoSettingButton";
             this.GoSettingButton.Size = new System.Drawing.Size(116, 57);
             this.GoSettingButton.TabIndex = 1;
             this.GoSettingButton.Text = "설정";
-            this.GoSettingButton.UseVisualStyleBackColor = true;
+            this.GoSettingButton.UseVisualStyleBackColor = false;
             this.GoSettingButton.Click += new System.EventHandler(this.GoSettingButton_Click);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExitButton.Location = new System.Drawing.Point(880, 528);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(116, 57);
+            this.ExitButton.TabIndex = 2;
+            this.ExitButton.Text = "종료";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 587);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.GoSettingButton);
             this.Controls.Add(this.LogListbox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -70,6 +86,7 @@
 
         private System.Windows.Forms.ListBox LogListbox;
         private System.Windows.Forms.Button GoSettingButton;
+        private System.Windows.Forms.Button ExitButton;
     }
 }
 

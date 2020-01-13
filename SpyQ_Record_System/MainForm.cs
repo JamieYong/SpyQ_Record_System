@@ -23,5 +23,10 @@ namespace SpyQ_Record_System
             SettingForm SF = new SettingForm();
             SF.Show();
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

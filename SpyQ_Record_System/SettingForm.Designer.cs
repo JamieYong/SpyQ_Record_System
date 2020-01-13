@@ -66,7 +66,7 @@
             this.WriterTextBox.Location = new System.Drawing.Point(12, 36);
             this.WriterTextBox.Name = "WriterTextBox";
             this.WriterTextBox.Size = new System.Drawing.Size(100, 21);
-            this.WriterTextBox.TabIndex = 0;
+            this.WriterTextBox.TabIndex = 1;
             // 
             // WriterLabel
             // 
@@ -75,7 +75,7 @@
             this.WriterLabel.Location = new System.Drawing.Point(12, 9);
             this.WriterLabel.Name = "WriterLabel";
             this.WriterLabel.Size = new System.Drawing.Size(64, 24);
-            this.WriterLabel.TabIndex = 1;
+            this.WriterLabel.TabIndex = 0;
             this.WriterLabel.Text = "기록관";
             // 
             // label1
@@ -120,7 +120,7 @@
             this.AttackCntTextBox.Location = new System.Drawing.Point(12, 268);
             this.AttackCntTextBox.Name = "AttackCntTextBox";
             this.AttackCntTextBox.Size = new System.Drawing.Size(64, 21);
-            this.AttackCntTextBox.TabIndex = 5;
+            this.AttackCntTextBox.TabIndex = 3;
             // 
             // label4
             // 
@@ -137,7 +137,7 @@
             this.ServeCntTextBox.Location = new System.Drawing.Point(132, 268);
             this.ServeCntTextBox.Name = "ServeCntTextBox";
             this.ServeCntTextBox.Size = new System.Drawing.Size(64, 21);
-            this.ServeCntTextBox.TabIndex = 9;
+            this.ServeCntTextBox.TabIndex = 6;
             // 
             // label5
             // 
@@ -154,7 +154,7 @@
             this.ServeAccTextbox.Location = new System.Drawing.Point(132, 205);
             this.ServeAccTextbox.Name = "ServeAccTextbox";
             this.ServeAccTextbox.Size = new System.Drawing.Size(64, 21);
-            this.ServeAccTextbox.TabIndex = 7;
+            this.ServeAccTextbox.TabIndex = 5;
             // 
             // label6
             // 
@@ -171,7 +171,7 @@
             this.ServeMissTextBox.Location = new System.Drawing.Point(132, 327);
             this.ServeMissTextBox.Name = "ServeMissTextBox";
             this.ServeMissTextBox.Size = new System.Drawing.Size(64, 21);
-            this.ServeMissTextBox.TabIndex = 11;
+            this.ServeMissTextBox.TabIndex = 7;
             // 
             // label7
             // 
@@ -188,7 +188,7 @@
             this.AttackMissTextBox.Location = new System.Drawing.Point(12, 327);
             this.AttackMissTextBox.Name = "AttackMissTextBox";
             this.AttackMissTextBox.Size = new System.Drawing.Size(64, 21);
-            this.AttackMissTextBox.TabIndex = 13;
+            this.AttackMissTextBox.TabIndex = 4;
             // 
             // label8
             // 
@@ -205,7 +205,7 @@
             this.ReceiveAccTextBox.Location = new System.Drawing.Point(516, 205);
             this.ReceiveAccTextBox.Name = "ReceiveAccTextBox";
             this.ReceiveAccTextBox.Size = new System.Drawing.Size(64, 21);
-            this.ReceiveAccTextBox.TabIndex = 19;
+            this.ReceiveAccTextBox.TabIndex = 13;
             // 
             // label9
             // 
@@ -222,7 +222,7 @@
             this.DigCntTextBox.Location = new System.Drawing.Point(253, 268);
             this.DigCntTextBox.Name = "DigCntTextBox";
             this.DigCntTextBox.Size = new System.Drawing.Size(64, 21);
-            this.DigCntTextBox.TabIndex = 17;
+            this.DigCntTextBox.TabIndex = 9;
             // 
             // label10
             // 
@@ -239,7 +239,7 @@
             this.DigAccTextBox.Location = new System.Drawing.Point(253, 205);
             this.DigAccTextBox.Name = "DigAccTextBox";
             this.DigAccTextBox.Size = new System.Drawing.Size(64, 21);
-            this.DigAccTextBox.TabIndex = 15;
+            this.DigAccTextBox.TabIndex = 8;
             // 
             // label11
             // 
@@ -256,7 +256,7 @@
             this.ReceiveCntTextBox.Location = new System.Drawing.Point(516, 268);
             this.ReceiveCntTextBox.Name = "ReceiveCntTextBox";
             this.ReceiveCntTextBox.Size = new System.Drawing.Size(64, 21);
-            this.ReceiveCntTextBox.TabIndex = 25;
+            this.ReceiveCntTextBox.TabIndex = 14;
             // 
             // label12
             // 
@@ -273,7 +273,7 @@
             this.BlockCntTextBox.Location = new System.Drawing.Point(375, 268);
             this.BlockCntTextBox.Name = "BlockCntTextBox";
             this.BlockCntTextBox.Size = new System.Drawing.Size(64, 21);
-            this.BlockCntTextBox.TabIndex = 23;
+            this.BlockCntTextBox.TabIndex = 11;
             // 
             // label13
             // 
@@ -290,7 +290,7 @@
             this.BlockAccTextBox.Location = new System.Drawing.Point(375, 205);
             this.BlockAccTextBox.Name = "BlockAccTextBox";
             this.BlockAccTextBox.Size = new System.Drawing.Size(64, 21);
-            this.BlockAccTextBox.TabIndex = 21;
+            this.BlockAccTextBox.TabIndex = 10;
             // 
             // label14
             // 
@@ -307,7 +307,7 @@
             this.DefenseMissTextBox.Location = new System.Drawing.Point(375, 327);
             this.DefenseMissTextBox.Name = "DefenseMissTextBox";
             this.DefenseMissTextBox.Size = new System.Drawing.Size(64, 21);
-            this.DefenseMissTextBox.TabIndex = 27;
+            this.DefenseMissTextBox.TabIndex = 12;
             // 
             // SaveButton
             // 
@@ -315,9 +315,10 @@
             this.SaveButton.Location = new System.Drawing.Point(253, 415);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
-            this.SaveButton.TabIndex = 29;
+            this.SaveButton.TabIndex = 15;
             this.SaveButton.Text = "저장";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // SettingExitButton
             // 
@@ -325,7 +326,7 @@
             this.SettingExitButton.Location = new System.Drawing.Point(404, 415);
             this.SettingExitButton.Name = "SettingExitButton";
             this.SettingExitButton.Size = new System.Drawing.Size(75, 23);
-            this.SettingExitButton.TabIndex = 30;
+            this.SettingExitButton.TabIndex = 16;
             this.SettingExitButton.Text = "종료";
             this.SettingExitButton.UseVisualStyleBackColor = false;
             this.SettingExitButton.Click += new System.EventHandler(this.SettingExitButton_Click);
