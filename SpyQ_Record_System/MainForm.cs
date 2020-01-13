@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace SpyQ_Record_System
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             Console.WriteLine("변웅섭 멍청이");
             InitializeComponent();
+        }
+
+        private void GoSettingButton_Click(object sender, EventArgs e)
+        {
+            SettingForm SF = new SettingForm();
+            SF.Show();
         }
     }
 }
