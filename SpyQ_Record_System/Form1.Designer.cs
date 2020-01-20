@@ -28,110 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListBox = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.StartYear = new System.Windows.Forms.ComboBox();
+            this.StartMonth = new System.Windows.Forms.ComboBox();
+            this.StartDay = new System.Windows.Forms.ComboBox();
+            this.EndYear = new System.Windows.Forms.ComboBox();
+            this.EndMonth = new System.Windows.Forms.ComboBox();
+            this.EndDay = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.TeamCBbox = new System.Windows.Forms.ComboBox();
+            this.PlayerCBbox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.select_btn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ListBox
+            // StartYear
             // 
-            this.ListBox.FormattingEnabled = true;
-            this.ListBox.ItemHeight = 15;
-            this.ListBox.Location = new System.Drawing.Point(638, 38);
-            this.ListBox.Name = "ListBox";
-            this.ListBox.Size = new System.Drawing.Size(559, 469);
-            this.ListBox.TabIndex = 0;
+            this.StartYear.FormattingEnabled = true;
+            this.StartYear.Location = new System.Drawing.Point(90, 114);
+            this.StartYear.Name = "StartYear";
+            this.StartYear.Size = new System.Drawing.Size(121, 23);
+            this.StartYear.TabIndex = 1;
             // 
-            // comboBox1
+            // StartMonth
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 1;
+            this.StartMonth.FormattingEnabled = true;
+            this.StartMonth.Location = new System.Drawing.Point(242, 114);
+            this.StartMonth.Name = "StartMonth";
+            this.StartMonth.Size = new System.Drawing.Size(121, 23);
+            this.StartMonth.TabIndex = 2;
             // 
-            // comboBox2
+            // StartDay
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(231, 79);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 2;
+            this.StartDay.FormattingEnabled = true;
+            this.StartDay.Location = new System.Drawing.Point(393, 114);
+            this.StartDay.Name = "StartDay";
+            this.StartDay.Size = new System.Drawing.Size(121, 23);
+            this.StartDay.TabIndex = 3;
             // 
-            // comboBox3
+            // EndYear
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(382, 79);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 3;
+            this.EndYear.FormattingEnabled = true;
+            this.EndYear.Location = new System.Drawing.Point(90, 202);
+            this.EndYear.Name = "EndYear";
+            this.EndYear.Size = new System.Drawing.Size(121, 23);
+            this.EndYear.TabIndex = 4;
             // 
-            // comboBox4
+            // EndMonth
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(79, 167);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 23);
-            this.comboBox4.TabIndex = 4;
+            this.EndMonth.FormattingEnabled = true;
+            this.EndMonth.Location = new System.Drawing.Point(242, 202);
+            this.EndMonth.Name = "EndMonth";
+            this.EndMonth.Size = new System.Drawing.Size(121, 23);
+            this.EndMonth.TabIndex = 5;
             // 
-            // comboBox5
+            // EndDay
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(231, 167);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 23);
-            this.comboBox5.TabIndex = 5;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(382, 167);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 23);
-            this.comboBox6.TabIndex = 6;
+            this.EndDay.FormattingEnabled = true;
+            this.EndDay.Location = new System.Drawing.Point(393, 202);
+            this.EndDay.Name = "EndDay";
+            this.EndDay.Size = new System.Drawing.Size(121, 23);
+            this.EndDay.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(271, 118);
+            this.label1.Location = new System.Drawing.Point(282, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 34);
+            this.label1.Size = new System.Drawing.Size(41, 33);
             this.label1.TabIndex = 7;
             this.label1.Text = "~";
             // 
-            // comboBox7
+            // TeamCBbox
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(114, 368);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 23);
-            this.comboBox7.TabIndex = 8;
+            this.TeamCBbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TeamCBbox.FormattingEnabled = true;
+            this.TeamCBbox.Location = new System.Drawing.Point(131, 340);
+            this.TeamCBbox.Name = "TeamCBbox";
+            this.TeamCBbox.Size = new System.Drawing.Size(121, 23);
+            this.TeamCBbox.TabIndex = 8;
+            this.TeamCBbox.Click += new System.EventHandler(this.TeamCBbox_Click);
             // 
-            // comboBox8
+            // PlayerCBbox
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(341, 368);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 23);
-            this.comboBox8.TabIndex = 9;
+            this.PlayerCBbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PlayerCBbox.FormattingEnabled = true;
+            this.PlayerCBbox.Location = new System.Drawing.Point(358, 340);
+            this.PlayerCBbox.Name = "PlayerCBbox";
+            this.PlayerCBbox.Size = new System.Drawing.Size(121, 23);
+            this.PlayerCBbox.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(117, 318);
+            this.label3.Location = new System.Drawing.Point(134, 290);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 34);
+            this.label3.Size = new System.Drawing.Size(103, 33);
             this.label3.TabIndex = 11;
             this.label3.Text = "TEAM";
             // 
@@ -139,50 +135,72 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(335, 318);
+            this.label2.Location = new System.Drawing.Point(352, 290);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 34);
+            this.label2.Size = new System.Drawing.Size(139, 33);
             this.label2.TabIndex = 12;
             this.label2.Text = "PLAYER";
+            // 
+            // select_btn
+            // 
+            this.select_btn.Location = new System.Drawing.Point(248, 404);
+            this.select_btn.Name = "select_btn";
+            this.select_btn.Size = new System.Drawing.Size(115, 45);
+            this.select_btn.TabIndex = 13;
+            this.select_btn.Text = "조회";
+            this.select_btn.UseVisualStyleBackColor = true;
+            this.select_btn.Click += new System.EventHandler(this.select_btn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(578, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(633, 443);
+            this.dataGridView1.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 541);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.select_btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.PlayerCBbox);
+            this.Controls.Add(this.TeamCBbox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.ListBox);
+            this.Controls.Add(this.EndDay);
+            this.Controls.Add(this.EndMonth);
+            this.Controls.Add(this.EndYear);
+            this.Controls.Add(this.StartDay);
+            this.Controls.Add(this.StartMonth);
+            this.Controls.Add(this.StartYear);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox ListBox;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox StartYear;
+        private System.Windows.Forms.ComboBox StartMonth;
+        private System.Windows.Forms.ComboBox StartDay;
+        private System.Windows.Forms.ComboBox EndYear;
+        private System.Windows.Forms.ComboBox EndMonth;
+        private System.Windows.Forms.ComboBox EndDay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox TeamCBbox;
+        private System.Windows.Forms.ComboBox PlayerCBbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button select_btn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
