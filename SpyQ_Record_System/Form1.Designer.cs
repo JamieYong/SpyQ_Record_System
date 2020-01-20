@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.select_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,14 +159,25 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 443);
+            this.dataGridView1.Size = new System.Drawing.Size(633, 494);
             this.dataGridView1.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(236, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 33);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "PERIOD";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 541);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.select_btn);
             this.Controls.Add(this.label2);
@@ -201,6 +213,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button select_btn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
