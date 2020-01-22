@@ -26,39 +26,28 @@ namespace SpyQ_Record_System
 
         private void TeamCBbox_Click(object sender, EventArgs e)
         {
-
-            /*
-            String[] str = {"모두" };
-
-            con.Open();
-            SqlCommand com = new SqlCommand();
-            string startdate = StartYear.Text + "-" + StartMonth.Text + "-" + StartDay.Text;
+            
+            /*string startdate = StartYear.Text + "-" + StartMonth.Text + "-" + StartDay.Text;
             string enddate = EndYear.Text + "-" + EndMonth.Text + "-" + EndDay.Text;
-            string Tselect = "Select distinct TeamA,TeamB from dbo.game_data where GameDate between ' " + startdate + "' AND '" + enddate + "'";
-            com.CommandText = Tselect;
-            SqlDataReader sr = com.ExecuteReader();
+            
+            con.Open();
+            string query = "exec Pteamname " + startdate + "," + enddate + ";";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = query;
 
-            while (sr.Read())
-            {
-                
-                string s = sr["TeamA"] as string;
-                str.Append(s);
-                s = sr["TeamB"] as string;
-                str.Append(s);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable data = new DataTable();
+            da.Fill(data);
 
-            }
-
-            TeamCBbox.Items.AddRange(str);
-            TeamCBbox.SelectedIndex = 0;
-
-            sr.Close();
-            con.Close();
-            */
+            TeamCBbox.DataSource = data;
+*/
         }
 
         private void select_btn_Click(object sender, EventArgs e)
         {
             con.Open();
+
 
             string startdate = StartYear.Text + "-" + StartMonth.Text + "-" + StartDay.Text;
             string enddate = EndYear.Text + "-" + EndMonth.Text + "-" + EndDay.Text;

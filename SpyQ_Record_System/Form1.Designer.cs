@@ -55,7 +55,21 @@
             // 
             // StartMonth
             // 
+            this.StartMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.StartMonth.FormattingEnabled = true;
+            this.StartMonth.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
             this.StartMonth.Location = new System.Drawing.Point(242, 114);
             this.StartMonth.Name = "StartMonth";
             this.StartMonth.Size = new System.Drawing.Size(121, 23);
@@ -63,7 +77,41 @@
             // 
             // StartDay
             // 
+            this.StartDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.StartDay.FormattingEnabled = true;
+            this.StartDay.ItemHeight = 15;
+            this.StartDay.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.StartDay.Location = new System.Drawing.Point(393, 114);
             this.StartDay.Name = "StartDay";
             this.StartDay.Size = new System.Drawing.Size(121, 23);
@@ -79,7 +127,21 @@
             // 
             // EndMonth
             // 
+            this.EndMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EndMonth.FormattingEnabled = true;
+            this.EndMonth.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
             this.EndMonth.Location = new System.Drawing.Point(242, 202);
             this.EndMonth.Name = "EndMonth";
             this.EndMonth.Size = new System.Drawing.Size(121, 23);
@@ -87,7 +149,41 @@
             // 
             // EndDay
             // 
+            this.EndDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EndDay.FormattingEnabled = true;
+            this.EndDay.ItemHeight = 15;
+            this.EndDay.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.EndDay.Location = new System.Drawing.Point(393, 202);
             this.EndDay.Name = "EndDay";
             this.EndDay.Size = new System.Drawing.Size(121, 23);
