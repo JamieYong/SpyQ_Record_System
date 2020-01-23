@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace SpyQ_Record_System
 {
@@ -27,21 +28,29 @@ namespace SpyQ_Record_System
         private void TeamCBbox_Click(object sender, EventArgs e)
         {
             
-            /*string startdate = StartYear.Text + "-" + StartMonth.Text + "-" + StartDay.Text;
-            string enddate = EndYear.Text + "-" + EndMonth.Text + "-" + EndDay.Text;
+                ArrayList arr = new ArrayList();
+                arr.Add("");
+                con.Open();
+                string query = "exec Pteamname '" + startdate.Text + "','" + enddate.Text + "';";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = query;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                
+                con.Close();
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    arr.Add(row["TeamName"].ToString());
+                }
+
+                TeamCBbox.DataSource = arr;
             
-            con.Open();
-            string query = "exec Pteamname " + startdate + "," + enddate + ";";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = query;
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable data = new DataTable();
-            da.Fill(data);
-
-            TeamCBbox.DataSource = data;
-*/
         }
 
         private void select_btn_Click(object sender, EventArgs e)
@@ -49,10 +58,8 @@ namespace SpyQ_Record_System
             con.Open();
 
 
-            string startdate = StartYear.Text + "-" + StartMonth.Text + "-" + StartDay.Text;
-            string enddate = EndYear.Text + "-" + EndMonth.Text + "-" + EndDay.Text;
-
-            string query = " exec Pselect @PdateA = '" + startdate + "' , @PdateB = '" + enddate + "' , @Pteam = ' " + TeamCBbox.Text + "', @Pplayer = '" + PlayerCBbox.Text + "';";
+     
+            string query = " exec Pselect @PdateA = '" + startdate.Text + "' , @PdateB = '" + enddate.Text + "' , @Pteam = ' " + TeamCBbox.Text + "', @Pplayer = '" + PlayerCBbox.Text + "';";
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
