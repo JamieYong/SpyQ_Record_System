@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.startdate = new System.Windows.Forms.DateTimePicker();
             this.enddate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(287, 161);
+            this.label1.Location = new System.Drawing.Point(291, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 33);
             this.label1.TabIndex = 7;
@@ -55,26 +56,28 @@
             // 
             this.TeamCBbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TeamCBbox.FormattingEnabled = true;
-            this.TeamCBbox.Location = new System.Drawing.Point(137, 343);
+            this.TeamCBbox.Location = new System.Drawing.Point(135, 357);
             this.TeamCBbox.Name = "TeamCBbox";
             this.TeamCBbox.Size = new System.Drawing.Size(121, 23);
             this.TeamCBbox.TabIndex = 8;
+            this.TeamCBbox.SelectedValueChanged += new System.EventHandler(this.TeamCBbox_SelectedValueChanged);
             this.TeamCBbox.Click += new System.EventHandler(this.TeamCBbox_Click);
             // 
             // PlayerCBbox
             // 
             this.PlayerCBbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PlayerCBbox.FormattingEnabled = true;
-            this.PlayerCBbox.Location = new System.Drawing.Point(364, 343);
+            this.PlayerCBbox.Location = new System.Drawing.Point(362, 357);
             this.PlayerCBbox.Name = "PlayerCBbox";
             this.PlayerCBbox.Size = new System.Drawing.Size(121, 23);
             this.PlayerCBbox.TabIndex = 9;
+            this.PlayerCBbox.Click += new System.EventHandler(this.PlayerCBbox_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(140, 293);
+            this.label3.Location = new System.Drawing.Point(138, 307);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 33);
             this.label3.TabIndex = 11;
@@ -84,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(358, 293);
+            this.label2.Location = new System.Drawing.Point(356, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 33);
             this.label2.TabIndex = 12;
@@ -92,7 +95,7 @@
             // 
             // select_btn
             // 
-            this.select_btn.Location = new System.Drawing.Point(254, 407);
+            this.select_btn.Location = new System.Drawing.Point(252, 421);
             this.select_btn.Name = "select_btn";
             this.select_btn.Size = new System.Drawing.Size(115, 45);
             this.select_btn.TabIndex = 13;
@@ -114,7 +117,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(248, 69);
+            this.label4.Location = new System.Drawing.Point(246, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 33);
             this.label4.TabIndex = 15;
@@ -123,7 +126,7 @@
             // startdate
             // 
             this.startdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startdate.Location = new System.Drawing.Point(123, 161);
+            this.startdate.Location = new System.Drawing.Point(127, 232);
             this.startdate.Name = "startdate";
             this.startdate.Size = new System.Drawing.Size(129, 25);
             this.startdate.TabIndex = 16;
@@ -131,16 +134,27 @@
             // enddate
             // 
             this.enddate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.enddate.Location = new System.Drawing.Point(358, 161);
+            this.enddate.Location = new System.Drawing.Point(362, 232);
             this.enddate.Name = "enddate";
             this.enddate.Size = new System.Drawing.Size(133, 25);
             this.enddate.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("굴림", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(114, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(381, 80);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "기록 조회";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 541);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.enddate);
             this.Controls.Add(this.startdate);
             this.Controls.Add(this.label4);
@@ -170,6 +184,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker startdate;
         private System.Windows.Forms.DateTimePicker enddate;
+        private System.Windows.Forms.Label label5;
     }
 }
 

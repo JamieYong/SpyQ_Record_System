@@ -59,7 +59,7 @@ namespace SpyQ_Record_System
 
 
      
-            string query = " exec Pselect @PdateA = '" + startdate.Text + "' , @PdateB = '" + enddate.Text + "' , @Pteam = ' " + TeamCBbox.Text + "', @Pplayer = '" + PlayerCBbox.Text + "';";
+            string query = " exec Pselect @PdateA = '" + startdate.Text + "' , @PdateB = '" + enddate.Text + "' , @Pteam = '" + TeamCBbox.Text + "', @Pplayer = '" + PlayerCBbox.Text + "';";
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -76,8 +76,45 @@ namespace SpyQ_Record_System
 
         }
 
+        private void PlayerCBbox_Click(object sender, EventArgs e)
+        {
+
+            ArrayList arr = new ArrayList();
+            arr.Add("");
+            con.Open();
+            string query = "exec Pplayername '" + TeamCBbox.Text + "';";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = query;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            con.Close();
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            DataTable dt = ds.Tables[0];
+
+            foreach (DataRow row in dt.Rows)
+            {
+                arr.Add(row["PlayerName"].ToString());
+            }
+
+            PlayerCBbox.DataSource = arr;
 
 
+
+
+        }
+
+        private void TeamCBbox_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            if(TeamCBbox.Text == "")
+            {
+                PlayerCBbox.Text = "";
+            }
+
+        }
     }
 }
  
