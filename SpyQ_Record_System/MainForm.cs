@@ -94,79 +94,81 @@ namespace SpyQ_Record_System
 
         private void goToSetting_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hello C#");
+            
         }
-        String firstKey;
-        String result;
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            if (firstKey == null)
-            {
-                if (keyData == (Keys.D))
-                {
-                    firstKey = "d";
-                }
-                else if (keyData == (Keys.A))
-                {
-                    firstKey = "a";
-                }
-                else if (keyData == (Keys.M))
-                {
-                    firstKey = "m";
-                }
-                else if (keyData == (Keys.S))
-                {
-                    firstKey = "s";
-                }
-                else if (keyData == (Keys.R))
-                {
-                    firstKey = "r";
-                }
-                else if (keyData == (Keys.B))
-                {
-                    firstKey = "b";
-                }
-                else
-                {
-                    MessageBox.Show("지정되지 않은 단축키입니다.");
-                }
-                return base.ProcessCmdKey(ref msg, keyData);
-            }
-            else if (firstKey == "m")
-            {
-                if (keyData == Keys.S)
-                {
-                    result = "범실";
-                    MessageBox.Show(firstKey + result);
-                }
-                else
-                {
-                    MessageBox.Show("지정되지 않은 단축키입니다.");
-                }
-                firstKey = null;
-                return base.ProcessCmdKey(ref msg, keyData);
-            }
-            else
-            {
-                if (keyData == Keys.T)
-                {
-                    result = "시도";
-                    MessageBox.Show(firstKey + result);
-                }
-                else if (keyData == Keys.S)
-                {
-                    result = "성공";
-                    MessageBox.Show(firstKey + result);
-                }
-                else
-                {
-                    MessageBox.Show("지정되지 않은 단축키입니다.");
-                }
+        //int playerNum;
+        //String firstKey;
+        //String result;
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+            
+        //    if (firstKey == null)
+        //    {
+        //                if (keyData == (Keys.D))
+        //                {
+        //                    firstKey = "d";
+        //                }
+        //                else if (keyData == (Keys.A))
+        //                {
+        //                    firstKey = "a";
+        //                }
+        //                else if (keyData == (Keys.M))
+        //                {
+        //                    firstKey = "m";
+        //                }
+        //                else if (keyData == (Keys.S))
+        //                {
+        //                    firstKey = "s";
+        //                }
+        //                else if (keyData == (Keys.R))
+        //                {
+        //                    firstKey = "r";
+        //                }
+        //                else if (keyData == (Keys.B))
+        //                {
+        //                    firstKey = "b";
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show("지정되지 않은 단축키입니다.");
+        //                }
+        //                return base.ProcessCmdKey(ref msg, keyData);
+        //    }
+        //    else if (firstKey == "m")
+        //    {
+        //                if (keyData == Keys.S)
+        //                {
+        //                    result = "범실";
+        //                    MessageBox.Show(firstKey + result);
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show("지정되지 않은 단축키입니다.");
+        //                }
+        //                firstKey = null;
+        //                return base.ProcessCmdKey(ref msg, keyData);
+        //    }
+        //    else
+        //    {
+        //                if (keyData == Keys.T)
+        //                {
+        //                    result = "시도";
+        //                    MessageBox.Show(firstKey + result);
+        //                }
+        //                else if (keyData == Keys.S)
+        //                {
+        //                    result = "성공";
+        //                    MessageBox.Show(firstKey + result);
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show("지정되지 않은 단축키입니다.");
+        //                }
                 
-                firstKey = null;
-                return base.ProcessCmdKey(ref msg, keyData);
-            }
-        }
+        //                firstKey = null;
+        //                return base.ProcessCmdKey(ref msg, keyData);
+        //    }
+        //}
 
 
         private void recordHolderLabel_Click(object sender, EventArgs e)
@@ -175,6 +177,26 @@ namespace SpyQ_Record_System
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InputBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InputBox_Enter(object sender, EventArgs e)
         {
 
         }
