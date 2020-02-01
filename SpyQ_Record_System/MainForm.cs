@@ -7,84 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SpyQ_Record_System
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Date_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void scoreTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Team1Home_click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Team2Name_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogPlayerAction_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogTeam1Score_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void SetCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,7 +26,8 @@ namespace SpyQ_Record_System
 
         private void goToSetting_Click(object sender, EventArgs e)
         {
-            
+            Setting setForm = new Setting();
+            setForm.Show();
         }
         //int playerNum;
         //String firstKey;
@@ -171,35 +104,26 @@ namespace SpyQ_Record_System
         //}
 
 
-        private void recordHolderLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+ 
+        private void InputBox_pressEnter() {
+            string data = InputBox.Text;
+            int num = Convert.ToInt32(data.Substring(0, 2));
+            MessageBox.Show(Convert.ToString(num.GetType()));
         }
 
-        private void InputBox_TextChanged(object sender, EventArgs e)
+        private void InputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                InputBox_pressEnter();
+            }
         }
 
-        private void InputBox_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListBox LogListBox;
-            this.goToSetting = new System.Windows.Forms.Button();
+            System.Windows.Forms.ListBox logBox;
             this.scoreTitle = new System.Windows.Forms.Label();
             this.ScorePanel = new System.Windows.Forms.Panel();
             this.RecordHolderName = new System.Windows.Forms.Label();
@@ -47,30 +46,22 @@
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.SetCombo = new System.Windows.Forms.ComboBox();
             this.logInput = new System.Windows.Forms.Label();
-            LogListBox = new System.Windows.Forms.ListBox();
+            this.goToSetting = new System.Windows.Forms.Button();
+            logBox = new System.Windows.Forms.ListBox();
             this.ScorePanel.SuspendLayout();
             this.UnderPanel.SuspendLayout();
             this.LogPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LogListBox
+            // logBox
             // 
-            LogListBox.FormattingEnabled = true;
-            LogListBox.ItemHeight = 12;
-            LogListBox.Location = new System.Drawing.Point(16, 9);
-            LogListBox.Name = "LogListBox";
-            LogListBox.Size = new System.Drawing.Size(143, 424);
-            LogListBox.TabIndex = 2;
-            // 
-            // goToSetting
-            // 
-            this.goToSetting.BackgroundImage = global::SpyQ_Record_System.Properties.Resources.wheel;
-            this.goToSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.goToSetting.Location = new System.Drawing.Point(12, 12);
-            this.goToSetting.Name = "goToSetting";
-            this.goToSetting.Size = new System.Drawing.Size(37, 37);
-            this.goToSetting.TabIndex = 10;
-            this.goToSetting.UseVisualStyleBackColor = true;
+            logBox.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            logBox.FormattingEnabled = true;
+            logBox.ItemHeight = 15;
+            logBox.Location = new System.Drawing.Point(15, 12);
+            logBox.Name = "logBox";
+            logBox.Size = new System.Drawing.Size(143, 424);
+            logBox.TabIndex = 2;
             // 
             // scoreTitle
             // 
@@ -115,7 +106,6 @@
             this.recordHolderLabel.Size = new System.Drawing.Size(41, 12);
             this.recordHolderLabel.TabIndex = 8;
             this.recordHolderLabel.Text = "기록관";
-            this.recordHolderLabel.Click += new System.EventHandler(this.recordHolderLabel_Click);
             // 
             // Team2Name
             // 
@@ -192,11 +182,11 @@
             this.InputBox.Name = "InputBox";
             this.InputBox.Size = new System.Drawing.Size(361, 35);
             this.InputBox.TabIndex = 0;
-            this.InputBox.Enter += new System.EventHandler(this.InputBox_Enter);
+            this.InputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputBox_KeyPress);
             // 
             // LogPanel
             // 
-            this.LogPanel.Controls.Add(LogListBox);
+            this.LogPanel.Controls.Add(logBox);
             this.LogPanel.Controls.Add(this.LogPanelScroll);
             this.LogPanel.Location = new System.Drawing.Point(630, 7);
             this.LogPanel.Name = "LogPanel";
@@ -242,6 +232,17 @@
             this.logInput.Size = new System.Drawing.Size(52, 21);
             this.logInput.TabIndex = 18;
             this.logInput.Text = "입력";
+            // 
+            // goToSetting
+            // 
+            this.goToSetting.BackgroundImage = global::SpyQ_Record_System.Properties.Resources.wheel;
+            this.goToSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.goToSetting.Location = new System.Drawing.Point(12, 12);
+            this.goToSetting.Name = "goToSetting";
+            this.goToSetting.Size = new System.Drawing.Size(37, 37);
+            this.goToSetting.TabIndex = 10;
+            this.goToSetting.UseVisualStyleBackColor = true;
+            this.goToSetting.Click += new System.EventHandler(this.goToSetting_Click);
             // 
             // MainForm
             // 
