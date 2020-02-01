@@ -67,10 +67,57 @@ namespace SpyQ_Record_System
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
+           
             da.Fill(ds, "record");
 
-            dataGridView1.DataSource = ds;
-            dataGridView1.DataMember = "record";
+            RecordTable.DataSource = ds;
+            RecordTable.DataMember = "record";
+
+            if (ColumnSelect.Text == "공격")
+            {
+
+                for (int i = 3; i < 15; i++)
+                {
+
+                    if (i >= 8)
+                    {
+                        RecordTable.Columns[i].Visible = false;
+                    }
+                    else
+                    {
+                        RecordTable.Columns[i].Visible = true;
+                    }
+
+                }
+
+
+            }
+            else if (ColumnSelect.Text == "수비")
+            {
+                for (int i = 3; i < 15; i++)
+                {
+
+                    if (i < 8)
+                    {
+                        RecordTable.Columns[i].Visible = false;
+                    }
+                    else
+                    {
+                        RecordTable.Columns[i].Visible = true;
+                    }
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i <= 15; i++)
+                {
+                    RecordTable.Columns[i].Visible = true;
+                }
+            }
+
+
+
 
             con.Close();
 
@@ -113,6 +160,62 @@ namespace SpyQ_Record_System
             {
                 PlayerCBbox.Text = "";
             }
+
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ColumnSelect.Text == "공격")
+                {
+
+                    for (int i = 3; i < 15; i++)
+                    {
+
+                        if (i >= 8)
+                        {
+                            RecordTable.Columns[i].Visible = false;
+                        }
+                        else
+                        {
+                            RecordTable.Columns[i].Visible = true;
+                        }
+
+                    }
+
+
+                }
+                else if (ColumnSelect.Text == "수비")
+                {
+                    for (int i = 3; i < 15; i++)
+                    {
+
+                        if (i < 8)
+                        {
+                            RecordTable.Columns[i].Visible = false;
+                        }
+                        else
+                        {
+                            RecordTable.Columns[i].Visible = true;
+                        }
+                    }
+
+                }
+                else
+                {
+                    for (int i = 0; i <= 15; i++)
+                    {
+                        RecordTable.Columns[i].Visible = true;
+                    }
+                }
+
+            }catch
+            {
+
+            }
+
+
 
         }
     }
