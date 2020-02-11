@@ -32,6 +32,7 @@ namespace SpyQ_Record_System
                 arr.Add("");
                 con.Open();
                 string query = "exec Pteamname '" + startdate.Text + "','" + enddate.Text + "';";
+                string query1 = string.Format("exec Pteamname '{0}','{1}'", startdate.Text, enddate.Text);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = query;
@@ -60,6 +61,8 @@ namespace SpyQ_Record_System
 
      
             string query = " exec Pselect @PdateA = '" + startdate.Text + "' , @PdateB = '" + enddate.Text + "' , @Pteam = '" + TeamCBbox.Text + "', @Pplayer = '" + PlayerCBbox.Text + "';";
+            string query1 = string.Format("exec Pselect @PdataA = '{0}", startdate.Text); // 아무튼 이런식으로... 
+
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
