@@ -29,6 +29,7 @@ namespace SpyQ_Record_System
             Setting setForm = new Setting();
             setForm.Show();
         }
+
         //int playerNum;
         //String firstKey;
         //String result;

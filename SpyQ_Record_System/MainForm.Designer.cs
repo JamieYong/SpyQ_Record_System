@@ -40,13 +40,13 @@
             this.Team2Score = new System.Windows.Forms.Label();
             this.Team1Score = new System.Windows.Forms.Label();
             this.UnderPanel = new System.Windows.Forms.Panel();
-            this.InputBox = new System.Windows.Forms.TextBox();
             this.LogPanel = new System.Windows.Forms.Panel();
             this.LogPanelScroll = new System.Windows.Forms.VScrollBar();
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.SetCombo = new System.Windows.Forms.ComboBox();
             this.logInput = new System.Windows.Forms.Label();
             this.goToSetting = new System.Windows.Forms.Button();
+            this.InputBox = new System.Windows.Forms.RichTextBox();
             logBox = new System.Windows.Forms.ListBox();
             this.ScorePanel.SuspendLayout();
             this.UnderPanel.SuspendLayout();
@@ -175,15 +175,6 @@
             this.UnderPanel.Size = new System.Drawing.Size(615, 122);
             this.UnderPanel.TabIndex = 13;
             // 
-            // InputBox
-            // 
-            this.InputBox.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.InputBox.Location = new System.Drawing.Point(12, 13);
-            this.InputBox.Name = "InputBox";
-            this.InputBox.Size = new System.Drawing.Size(361, 35);
-            this.InputBox.TabIndex = 0;
-            this.InputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputBox_KeyPress);
-            // 
             // LogPanel
             // 
             this.LogPanel.Controls.Add(logBox);
@@ -244,6 +235,15 @@
             this.goToSetting.UseVisualStyleBackColor = true;
             this.goToSetting.Click += new System.EventHandler(this.goToSetting_Click);
             // 
+            // InputBox
+            // 
+            this.InputBox.Location = new System.Drawing.Point(8, 11);
+            this.InputBox.Multiline = false;
+            this.InputBox.Name = "InputBox";
+            this.InputBox.Size = new System.Drawing.Size(597, 97);
+            this.InputBox.TabIndex = 1;
+            this.InputBox.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -263,7 +263,6 @@
             this.ScorePanel.ResumeLayout(false);
             this.ScorePanel.PerformLayout();
             this.UnderPanel.ResumeLayout(false);
-            this.UnderPanel.PerformLayout();
             this.LogPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,8 +287,8 @@
         private System.Windows.Forms.VScrollBar LogPanelScroll;
         private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.ComboBox SetCombo;
-        private System.Windows.Forms.TextBox InputBox;
         private System.Windows.Forms.Label logInput;
+        private System.Windows.Forms.RichTextBox InputBox;
     }
 }
 
