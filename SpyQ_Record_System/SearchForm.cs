@@ -12,11 +12,11 @@ using System.Collections;
 
 namespace SpyQ_Record_System
 {
-    public partial class Form1 : Form
+    public partial class SearchForm : Form
     {
 
         SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=recordproject;Integrated Security=True");
-        public Form1()
+        public SearchForm()
         {
             Console.WriteLine("Hello windowforms");
             InitializeComponent();
@@ -31,7 +31,8 @@ namespace SpyQ_Record_System
                 ArrayList arr = new ArrayList();
                 arr.Add("");
                 con.Open();
-                string query = "exec Pteamname '" + startdate.Text + "','" + enddate.Text + "';";
+
+                string query = String.Format("exec Pteamname '{0}', '{1}'", startdate.Text, enddate.Text);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = query;
@@ -48,6 +49,9 @@ namespace SpyQ_Record_System
                     arr.Add(row["TeamName"].ToString());
                 }
 
+
+
+
                 TeamCBbox.DataSource = arr;
             
 
@@ -59,7 +63,8 @@ namespace SpyQ_Record_System
 
 
      
-            string query = " exec Pselect @PdateA = '" + startdate.Text + "' , @PdateB = '" + enddate.Text + "' , @Pteam = '" + TeamCBbox.Text + "', @Pplayer = '" + PlayerCBbox.Text + "';";
+            string query = String.Format("exec Pselect @PdateA = '{0}' , @PdateB = '{1}' , @Pteam='{2}', @Pplayer ='{3}' ", startdate.Text, enddate.Text, TeamCBbox.Text, PlayerCBbox.Text);
+
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -73,7 +78,11 @@ namespace SpyQ_Record_System
             RecordTable.DataSource = ds;
             RecordTable.DataMember = "record";
 
-            if (ColumnSelect.Text == "공격")
+
+
+
+
+                if (ColumnSelect.Text == "공격")
             {
 
                 for (int i = 3; i < 15; i++)
@@ -129,7 +138,7 @@ namespace SpyQ_Record_System
             ArrayList arr = new ArrayList();
             arr.Add("");
             con.Open();
-            string query = "exec Pplayername '" + TeamCBbox.Text + "';";
+            string query = String.Format("exec Pplayername '{0}'",TeamCBbox.Text);
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = query;
