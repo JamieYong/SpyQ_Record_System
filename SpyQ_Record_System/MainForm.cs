@@ -9,124 +9,73 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace SpyQ_Record_System
+namespace SpyQRecordSystem
 {
     public partial class MainForm : Form
     {
-
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private void SetCombo_SelectedIndexChanged(object sender, EventArgs e)
+        public static string recordHolder;
+        public static string oppTeam;
+        private void MainForm_Load(object sender, EventArgs e)
         {
-
+            this.RecordHolderName.Text = recordHolder;
+            this.Team2Name.Text = oppTeam;
         }
 
         private void goToSetting_Click(object sender, EventArgs e)
         {
-            Setting setForm = new Setting();
-            setForm.Show();
+           MessageBox.Show("hello C#");
         }
-
-        //int playerNum;
-        //String firstKey;
-        //String result;
-        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        //{
-            
-        //    if (firstKey == null)
-        //    {
-        //                if (keyData == (Keys.D))
-        //                {
-        //                    firstKey = "d";
-        //                }
-        //                else if (keyData == (Keys.A))
-        //                {
-        //                    firstKey = "a";
-        //                }
-        //                else if (keyData == (Keys.M))
-        //                {
-        //                    firstKey = "m";
-        //                }
-        //                else if (keyData == (Keys.S))
-        //                {
-        //                    firstKey = "s";
-        //                }
-        //                else if (keyData == (Keys.R))
-        //                {
-        //                    firstKey = "r";
-        //                }
-        //                else if (keyData == (Keys.B))
-        //                {
-        //                    firstKey = "b";
-        //                }
-        //                else
-        //                {
-        //                    MessageBox.Show("지정되지 않은 단축키입니다.");
-        //                }
-        //                return base.ProcessCmdKey(ref msg, keyData);
-        //    }
-        //    else if (firstKey == "m")
-        //    {
-        //                if (keyData == Keys.S)
-        //                {
-        //                    result = "범실";
-        //                    MessageBox.Show(firstKey + result);
-        //                }
-        //                else
-        //                {
-        //                    MessageBox.Show("지정되지 않은 단축키입니다.");
-        //                }
-        //                firstKey = null;
-        //                return base.ProcessCmdKey(ref msg, keyData);
-        //    }
-        //    else
-        //    {
-        //                if (keyData == Keys.T)
-        //                {
-        //                    result = "시도";
-        //                    MessageBox.Show(firstKey + result);
-        //                }
-        //                else if (keyData == Keys.S)
-        //                {
-        //                    result = "성공";
-        //                    MessageBox.Show(firstKey + result);
-        //                }
-        //                else
-        //                {
-        //                    MessageBox.Show("지정되지 않은 단축키입니다.");
-        //                }
                 
-        //                firstKey = null;
-        //                return base.ProcessCmdKey(ref msg, keyData);
-        //    }
-        //}
 
-
-        
-        private void MainForm_Load(object sender, EventArgs e)
+        private void inputBox_KeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-
-        }
- 
-        private void InputBox_pressEnter() {
-            string data = InputBox.Text;
-            int num = Convert.ToInt32(data.Substring(0, 2));
-            MessageBox.Show(Convert.ToString(num.GetType()));
-        }
-
-        private void InputBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar == (char)Keys.Enter)
+            if(e.KeyCode == Keys.Enter)
             {
-                InputBox_pressEnter();
+                if(inputBox.Text == null)
+                {
+                    MessageBox.Show("아무것도 입력되지 않았습니다.");
+                    return;
+                }
+                else
+                {
+                    bool can_in;
+                    string text = inputBox.Text;
+                    if(text.Length == 4)
+                    {
+                        if ((text[0] >= 80 && text[0] <= 89) && (text[1] >= 80 && text[1] <= 89))
+                        {
+                            if (text[2] == 'd' || text[2] == 'a' || text[2] == 's' || text[2] == 'm' || text[2] == 'r' || text[2] == 'b')
+                            {
+
+                            }
+                        }
+                    }
+                    else
+                    {
+                        can_in = false;
+                    }
+                }
             }
         }
+        int set = 1;
+        private void SetchangeBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=recordproject;Integrated Security=True");
 
+            con.Open();
+            Console.WriteLine("DB연결");
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO game_data"); // 쿼리문 작성
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
     }
-
+    
 }
 
 

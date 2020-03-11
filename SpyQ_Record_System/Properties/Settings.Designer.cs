@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SpyQ_Record_System.Properties
+namespace SpyQRecordSystem.Properties
 {
 
 
