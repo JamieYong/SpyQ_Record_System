@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21B76CD7-DFC7-44BC-9345-A23465B48BCD}</ProjectGuid>
+    <ProjectGuid>{E4D8D8B7-A31A-4EFF-9853-1E4E1458A3F2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SpyQRecordSystem</RootNamespace>
     <AssemblyName>SpyQRecordSystem</AssemblyName>
