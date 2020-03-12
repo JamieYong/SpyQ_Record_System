@@ -1,4 +1,4 @@
-﻿namespace SpyQRecordSystem
+﻿namespace SpyQ_Record_System
 {
     partial class MainForm
     {
@@ -236,7 +236,7 @@
             // 
             // goToSetting
             // 
-            this.goToSetting.BackgroundImage = global::SpyQRecordSystem.Properties.Resources.wheel;
+            this.goToSetting.BackgroundImage = global::SpyQ_Record_System.Properties.Resources.wheel;
             this.goToSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.goToSetting.Location = new System.Drawing.Point(8, 3);
             this.goToSetting.Name = "goToSetting";

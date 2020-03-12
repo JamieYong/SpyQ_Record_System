@@ -1,4 +1,4 @@
-﻿namespace SpyQRecordSystem
+﻿namespace SpyQ_Record_System
 {
     partial class GameSetForm
     {
@@ -40,7 +40,7 @@
             // 
             // StartImg
             // 
-            this.StartImg.BackgroundImage = global::SpyQRecordSystem.Properties.Resources.StartImg1;
+            this.StartImg.BackgroundImage = global::SpyQ_Record_System.Properties.Resources.StartImg1;
             this.StartImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.StartImg.Location = new System.Drawing.Point(201, 68);
             this.StartImg.Name = "StartImg";

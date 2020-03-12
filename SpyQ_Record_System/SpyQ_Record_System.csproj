@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E4D8D8B7-A31A-4EFF-9853-1E4E1458A3F2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SpyQRecordSystem</RootNamespace>
-    <AssemblyName>SpyQRecordSystem</AssemblyName>
+    <RootNamespace>SpyQ_Record_System</RootNamespace>
+    <AssemblyName>SpyQ_Record_System</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

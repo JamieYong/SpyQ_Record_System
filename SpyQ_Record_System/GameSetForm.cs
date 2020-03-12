@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace SpyQRecordSystem
+namespace SpyQ_Record_System
 {
     public partial class GameSetForm : Form
     {

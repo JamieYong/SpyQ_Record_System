@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SpyQRecordSystem
+namespace SpyQ_Record_System
 {
     static class Program
     {
