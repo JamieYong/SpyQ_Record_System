@@ -30,11 +30,12 @@ namespace SpyQ_Record_System
             }
             else
             {
-                this.Visible = false;
+                this.Hide();
                 MainForm mainform = new MainForm();
                 MainForm.oppTeam = oppTeamBox.Text;
                 MainForm.recordHolder = WriterBox.Text;
                 mainform.ShowDialog();
+                this.Close();
             }
             
         }

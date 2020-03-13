@@ -32,49 +32,74 @@ namespace SpyQ_Record_System
         }
                 
 
-        private void inputBox_KeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void SetchangeBtn_Click(object sender, EventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
-            {
-                if(inputBox.Text == null)
-                {
-                    MessageBox.Show("아무것도 입력되지 않았습니다.");
-                    return;
-                }
-                else
-                {
-                    bool can_in;
-                    string text = inputBox.Text;
-                    if(text.Length == 4)
-                    {
-                        if ((text[0] >= 80 && text[0] <= 89) && (text[1] >= 80 && text[1] <= 89))
-                        {
-                            if (text[2] == 'd' || text[2] == 'a' || text[2] == 's' || text[2] == 'm' || text[2] == 'r' || text[2] == 'b')
-                            {
+            // insert 변수 선언
+            string teamA = Team1Name.Text;
+            string teamB = Team2Name.Text;
+            int scoreA = int.Parse(Team1Score.Text);
+            int scoreB = int.Parse(Team2Score.Text);
+            int setNum = int.Parse(ASetScore.Text)+ int.Parse(BSetScore.Text);
+            
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=recordproject;Integrated Security=True");
+            SqlCommand sqlComm = new SqlCommand();
+            sqlComm.Connection = con;
+            sqlComm.CommandText = "insert into game_data (GameCode,TeamA,TeamB,ScoreA,ScoreB,SetNum,GameDate) values(@GameCode,@TeamA,@TeamB,@ScoreA,@ScoreB,@SetNum,@GameDate)";
+            sqlComm.Parameters.AddWithValue("@Gamecode", "00000000000");
+            sqlComm.Parameters.AddWithValue("@TeamA", teamA);
+            sqlComm.Parameters.AddWithValue("@TeamB", teamB);
+            sqlComm.Parameters.AddWithValue("@ScoreA", scoreA);
+            sqlComm.Parameters.AddWithValue("@ScoreB", scoreB);
+            sqlComm.Parameters.AddWithValue("@SetNum", setNum);
+            sqlComm.Parameters.AddWithValue("@GameDate", DateTime.Now);
+            con.Open();
+            sqlComm.ExecuteNonQuery();
+            con.Close();
+        }
+        private void inputBox_KeyDown(object sender, KeyEventArgs e)
+        {
 
-                            }
-                        }
+            string[] keySet = { "dt", "dt", "at", "as","am","ms","st","ss","rt","rs","bt","bs" };
+            bool check;
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+                if (inputBox != null && !string.IsNullOrWhiteSpace(inputBox.Text))
+                {
+                    string[] input = inputBox.Text.Split(' ');
+                    if (input.Length > 2)
+                    {
+                        MessageBox.Show("키를 다시 입력하여 주십시오");
                     }
                     else
                     {
-                        can_in = false;
+                        if (input[0] is string)
+                        {
+                            foreach (var k in keySet)
+                            {
+                                if (input[0] == k)
+                                {
+                                    check = true;
+                                }
+                                else
+                                {
+                                    check = false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                           MessageBox.Show("키를 다시 입력하여 주십시오");
+                        }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("아무것도 입력되지 않았습니다. 다시 입력하여 주십시오.");
                 }
             }
         }
-        int set = 1;
-        private void SetchangeBtn_Click(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=recordproject;Integrated Security=True");
-
-            con.Open();
-            Console.WriteLine("DB연결");
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO game_data"); // 쿼리문 작성
-            cmd.ExecuteNonQuery();
-
-            con.Close();
-        }
-
+      
     }
     
 }
@@ -82,3 +107,5 @@ namespace SpyQ_Record_System
 
 
 // + 세트 바꾸기-combobox-누르면 확인창 후 db로 전송,설정창으로 이동하는거, 휴지통 등
+
+
