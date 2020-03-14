@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListBox LogListBox;
             System.Windows.Forms.GroupBox underBox;
+            this.inputBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SetchangeBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.LogPanel = new System.Windows.Forms.Panel();
             this.LogPanelScroll = new System.Windows.Forms.VScrollBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SetchangeBtn = new System.Windows.Forms.Button();
-            this.inputBox = new System.Windows.Forms.TextBox();
             this.goToSetting = new System.Windows.Forms.Button();
             this.Scorepanel = new System.Windows.Forms.GroupBox();
             this.RecordHolderName = new System.Windows.Forms.Label();
@@ -51,40 +51,39 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             LogListBox = new System.Windows.Forms.ListBox();
             underBox = new System.Windows.Forms.GroupBox();
+            underBox.SuspendLayout();
             this.LogPanel.SuspendLayout();
             this.Scorepanel.SuspendLayout();
-            underBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // LogListBox
             // 
             LogListBox.FormattingEnabled = true;
             LogListBox.ItemHeight = 12;
-            LogListBox.Location = new System.Drawing.Point(16, 9);
+            LogListBox.Location = new System.Drawing.Point(14, 9);
             LogListBox.Name = "LogListBox";
             LogListBox.Size = new System.Drawing.Size(143, 424);
             LogListBox.TabIndex = 2;
             // 
-            // contextMenuStrip1
+            // underBox
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            underBox.Controls.Add(this.inputBox);
+            underBox.Controls.Add(this.label1);
+            underBox.Controls.Add(this.SetchangeBtn);
+            underBox.Location = new System.Drawing.Point(12, 333);
+            underBox.Name = "underBox";
+            underBox.Size = new System.Drawing.Size(601, 100);
+            underBox.TabIndex = 14;
+            underBox.TabStop = false;
             // 
-            // LogPanel
+            // inputBox
             // 
-            this.LogPanel.Controls.Add(LogListBox);
-            this.LogPanel.Controls.Add(this.LogPanelScroll);
-            this.LogPanel.Location = new System.Drawing.Point(632, 0);
-            this.LogPanel.Name = "LogPanel";
-            this.LogPanel.Size = new System.Drawing.Size(168, 444);
-            this.LogPanel.TabIndex = 6;
-            // 
-            // LogPanelScroll
-            // 
-            this.LogPanelScroll.Location = new System.Drawing.Point(241, 12);
-            this.LogPanelScroll.Name = "LogPanelScroll";
-            this.LogPanelScroll.Size = new System.Drawing.Size(11, 432);
-            this.LogPanelScroll.TabIndex = 1;
+            this.inputBox.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.inputBox.Location = new System.Drawing.Point(80, 28);
+            this.inputBox.Name = "inputBox";
+            this.inputBox.Size = new System.Drawing.Size(198, 33);
+            this.inputBox.TabIndex = 0;
+            this.inputBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputBox_KeyDown);
             // 
             // label1
             // 
@@ -107,14 +106,26 @@
             this.SetchangeBtn.UseVisualStyleBackColor = true;
             this.SetchangeBtn.Click += new System.EventHandler(this.SetchangeBtn_Click);
             // 
-            // inputBox
+            // contextMenuStrip1
             // 
-            this.inputBox.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.inputBox.Location = new System.Drawing.Point(80, 34);
-            this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(198, 33);
-            this.inputBox.TabIndex = 0;
-            this.inputBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputBox_KeyDown);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // LogPanel
+            // 
+            this.LogPanel.Controls.Add(LogListBox);
+            this.LogPanel.Controls.Add(this.LogPanelScroll);
+            this.LogPanel.Location = new System.Drawing.Point(632, 0);
+            this.LogPanel.Name = "LogPanel";
+            this.LogPanel.Size = new System.Drawing.Size(168, 444);
+            this.LogPanel.TabIndex = 6;
+            // 
+            // LogPanelScroll
+            // 
+            this.LogPanelScroll.Location = new System.Drawing.Point(241, 12);
+            this.LogPanelScroll.Name = "LogPanelScroll";
+            this.LogPanelScroll.Size = new System.Drawing.Size(11, 432);
+            this.LogPanelScroll.TabIndex = 1;
             // 
             // goToSetting
             // 
@@ -247,17 +258,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 13;
             // 
-            // underBox
-            // 
-            underBox.Controls.Add(this.inputBox);
-            underBox.Controls.Add(this.label1);
-            underBox.Controls.Add(this.SetchangeBtn);
-            underBox.Location = new System.Drawing.Point(12, 333);
-            underBox.Name = "underBox";
-            underBox.Size = new System.Drawing.Size(601, 100);
-            underBox.TabIndex = 14;
-            underBox.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -271,11 +271,11 @@
             this.Controls.Add(underBox);
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            underBox.ResumeLayout(false);
+            underBox.PerformLayout();
             this.LogPanel.ResumeLayout(false);
             this.Scorepanel.ResumeLayout(false);
             this.Scorepanel.PerformLayout();
-            underBox.ResumeLayout(false);
-            underBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

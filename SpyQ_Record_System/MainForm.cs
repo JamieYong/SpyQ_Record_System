@@ -28,9 +28,9 @@ namespace SpyQ_Record_System
 
         private void goToSetting_Click(object sender, EventArgs e)
         {
-           MessageBox.Show("hello C#");
+            MessageBox.Show("hello C#");
         }
-                
+
 
         private void SetchangeBtn_Click(object sender, EventArgs e)
         {
@@ -39,8 +39,8 @@ namespace SpyQ_Record_System
             string teamB = Team2Name.Text;
             int scoreA = int.Parse(Team1Score.Text);
             int scoreB = int.Parse(Team2Score.Text);
-            int setNum = int.Parse(ASetScore.Text)+ int.Parse(BSetScore.Text);
-            
+            int setNum = int.Parse(ASetScore.Text) + int.Parse(BSetScore.Text);
+
             SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=recordproject;Integrated Security=True");
             SqlCommand sqlComm = new SqlCommand();
             sqlComm.Connection = con;
@@ -59,50 +59,62 @@ namespace SpyQ_Record_System
         private void inputBox_KeyDown(object sender, KeyEventArgs e)
         {
 
-            string[] keySet = { "dt", "dt", "at", "as","am","ms","st","ss","rt","rs","bt","bs" };
-            bool check;
+            string[] keySet = { "dt", "ds", "at", "as", "am", "ms", "st", "ss", "rt", "rs", "bt", "bs" };
+            bool check = false;
             if (e.KeyCode == Keys.Enter)
             {
-                
+
                 if (inputBox != null && !string.IsNullOrWhiteSpace(inputBox.Text))
                 {
                     string[] input = inputBox.Text.Split(' ');
-                    if (input.Length > 2)
+                    if (input.Length != 2)
                     {
-                        MessageBox.Show("키를 다시 입력하여 주십시오");
+                        MessageBox.Show("키를 다시 입력하여 주십시오1");
                     }
                     else
                     {
-                        if (input[0] is string)
+                        if (input[0].Length != 2)
                         {
-                            foreach (var k in keySet)
-                            {
-                                if (input[0] == k)
-                                {
-                                    check = true;
-                                }
-                                else
-                                {
-                                    check = false;
-                                }
-                            }
+                            MessageBox.Show("키를 다시 입력하여 주십시오3");
                         }
                         else
                         {
-                           MessageBox.Show("키를 다시 입력하여 주십시오");
+                            MessageBox.Show("여기까지 성공");
                         }
                     }
                 }
+                //if (input[0] is string)
+                //{
+                //    foreach (var k in keyset)
+                //    {
+                //        if (input[0] == k)
+                //        {
+                //            check = true;
+                //        }
+                //    }
+                //    if (check)
+                //    {
+                //        switch (input[0])
+                //        {
+
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //   messagebox.show("키를 다시 입력하여 주십시오2");
+                //}
                 else
                 {
                     MessageBox.Show("아무것도 입력되지 않았습니다. 다시 입력하여 주십시오.");
                 }
             }
         }
-      
     }
-    
 }
+            
+    
+   
 
 
 
