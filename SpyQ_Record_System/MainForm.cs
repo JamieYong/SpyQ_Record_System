@@ -71,6 +71,11 @@ namespace SpyQ_Record_System
                     sqlComm.Parameters.AddWithValue("@ScoreB", this.team2Sco);
                     sqlComm.Parameters.AddWithValue("@SetNum", team1Set + team2Set);
                     sqlComm.Parameters.AddWithValue("@GameDate", DateTime.Now);
+
+                    /*
+                    파라미터 사용 굳
+                    */
+
                     con.Open();
                     sqlComm.ExecuteNonQuery();
                     con.Close();
@@ -86,7 +91,7 @@ namespace SpyQ_Record_System
         private void inputBox_KeyDown(object sender, KeyEventArgs e)
         {
             string[] keySet = { "at", "as", "af", "st", "ss", "ft", "fs", "ff", "dt", "ds", "bt", "bs" };
-            
+            // └얘를 배열로 이렇게 선언하지말고 설정하는 공간에서 받아오는게 좋을텐데.... 처음하면 그 부분이 힘들수도 있겠구만
 
             if (e.KeyCode == Keys.Enter)
             {
