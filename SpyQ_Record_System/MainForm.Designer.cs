@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListBox LogListBox;
             System.Windows.Forms.GroupBox underBox;
             this.inputBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SetchangeBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.LogPanel = new System.Windows.Forms.Panel();
+            this.LogPanelScroll = new System.Windows.Forms.VScrollBar();
             this.goToSetting = new System.Windows.Forms.Button();
             this.Scorepanel = new System.Windows.Forms.GroupBox();
             this.RecordHolderName = new System.Windows.Forms.Label();
@@ -46,15 +49,21 @@
             this.recordHolderLabel = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.LogPanelScroll = new System.Windows.Forms.VScrollBar();
-            this.LogPanel = new System.Windows.Forms.Panel();
-            this.LogBox = new System.Windows.Forms.CheckedListBox();
-            this.LogDeleteButton = new System.Windows.Forms.Button();
+            LogListBox = new System.Windows.Forms.ListBox();
             underBox = new System.Windows.Forms.GroupBox();
             underBox.SuspendLayout();
-            this.Scorepanel.SuspendLayout();
             this.LogPanel.SuspendLayout();
+            this.Scorepanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // LogListBox
+            // 
+            LogListBox.FormattingEnabled = true;
+            LogListBox.ItemHeight = 12;
+            LogListBox.Location = new System.Drawing.Point(14, 9);
+            LogListBox.Name = "LogListBox";
+            LogListBox.Size = new System.Drawing.Size(143, 424);
+            LogListBox.TabIndex = 2;
             // 
             // underBox
             // 
@@ -101,6 +110,22 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // LogPanel
+            // 
+            this.LogPanel.Controls.Add(LogListBox);
+            this.LogPanel.Controls.Add(this.LogPanelScroll);
+            this.LogPanel.Location = new System.Drawing.Point(632, 0);
+            this.LogPanel.Name = "LogPanel";
+            this.LogPanel.Size = new System.Drawing.Size(168, 444);
+            this.LogPanel.TabIndex = 6;
+            // 
+            // LogPanelScroll
+            // 
+            this.LogPanelScroll.Location = new System.Drawing.Point(241, 12);
+            this.LogPanelScroll.Name = "LogPanelScroll";
+            this.LogPanelScroll.Size = new System.Drawing.Size(11, 432);
+            this.LogPanelScroll.TabIndex = 1;
             // 
             // goToSetting
             // 
@@ -233,42 +258,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 13;
             // 
-            // LogPanelScroll
-            // 
-            this.LogPanelScroll.Location = new System.Drawing.Point(241, 12);
-            this.LogPanelScroll.Name = "LogPanelScroll";
-            this.LogPanelScroll.Size = new System.Drawing.Size(11, 432);
-            this.LogPanelScroll.TabIndex = 1;
-            // 
-            // LogPanel
-            // 
-            this.LogPanel.Controls.Add(this.LogDeleteButton);
-            this.LogPanel.Controls.Add(this.LogBox);
-            this.LogPanel.Controls.Add(this.LogPanelScroll);
-            this.LogPanel.Location = new System.Drawing.Point(632, 0);
-            this.LogPanel.Name = "LogPanel";
-            this.LogPanel.Size = new System.Drawing.Size(168, 444);
-            this.LogPanel.TabIndex = 6;
-            // 
-            // LogBox
-            // 
-            this.LogBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogBox.FormattingEnabled = true;
-            this.LogBox.Location = new System.Drawing.Point(9, 12);
-            this.LogBox.Name = "LogBox";
-            this.LogBox.Size = new System.Drawing.Size(150, 356);
-            this.LogBox.TabIndex = 2;
-            // 
-            // LogDeleteButton
-            // 
-            this.LogDeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogDeleteButton.Location = new System.Drawing.Point(9, 374);
-            this.LogDeleteButton.Name = "LogDeleteButton";
-            this.LogDeleteButton.Size = new System.Drawing.Size(150, 43);
-            this.LogDeleteButton.TabIndex = 3;
-            this.LogDeleteButton.Text = "삭제";
-            this.LogDeleteButton.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -284,9 +273,9 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             underBox.ResumeLayout(false);
             underBox.PerformLayout();
+            this.LogPanel.ResumeLayout(false);
             this.Scorepanel.ResumeLayout(false);
             this.Scorepanel.PerformLayout();
-            this.LogPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +283,8 @@
 
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel LogPanel;
+        private System.Windows.Forms.VScrollBar LogPanelScroll;
         private System.Windows.Forms.Button goToSetting;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox inputBox;
@@ -309,10 +300,6 @@
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Label BSetScore;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.VScrollBar LogPanelScroll;
-        private System.Windows.Forms.Panel LogPanel;
-        private System.Windows.Forms.Button LogDeleteButton;
-        private System.Windows.Forms.CheckedListBox LogBox;
     }
 }
 
