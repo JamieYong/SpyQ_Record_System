@@ -27,6 +27,7 @@ namespace SpyQ_Record_System
             {
                 MessageBox.Show("상대팀이름과 기록관을 입력해주세요.");
                 return;
+                
             }
             else
             {
